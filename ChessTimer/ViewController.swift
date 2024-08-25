@@ -8,10 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var isWhite = true
-    var isBlack = false
-    var isWhiteTurn = false
-    var isBlackTurn = false
+    var isNotWhite = true
+    var isNotBlack = false
     var timeWhite = 300.0
     var timeBlack = 300.0
     
@@ -30,16 +28,12 @@ class ViewController: UIViewController {
             count.invalidate()
         }
         
-        if isWhite {
-            isWhite = false
-            isBlack = true
-            isWhiteTurn = true
-            isBlackTurn = false
+        if isNotWhite {
+            isNotWhite = false
+            isNotBlack = true
         } else {
-            isWhite = true
-            isBlack = false
-            isWhiteTurn = false
-            isBlackTurn = true
+            isNotWhite = true
+            isNotBlack = false
         }
         
         count = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: onTimerTick(count:))
@@ -54,10 +48,8 @@ class ViewController: UIViewController {
         timeBlack = 300.0
         whitetTime.text = timeFormatter.string(from: timeWhite)
         blackTime.text = timeFormatter.string(from: timeBlack)
-        isWhite = true
-        isBlack = false
-        isWhiteTurn = false
-        isBlackTurn = false
+        isNotWhite = true
+        isNotBlack = false
     }
     
     override func viewDidLoad() {
@@ -69,7 +61,7 @@ class ViewController: UIViewController {
     }
     
     func onTimerTick(count: Timer) {
-        if isWhiteTurn {
+        if isNotBlack {
             if timeWhite != 0.0 {
                 timeWhite -= 1.0
                 whitetTime.text = timeFormatter.string(from: timeWhite)
