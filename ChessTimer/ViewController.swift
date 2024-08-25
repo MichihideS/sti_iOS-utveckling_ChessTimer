@@ -12,9 +12,10 @@ class ViewController: UIViewController {
     var isBlack = false
     var isWhiteTurn = false
     var isBlackTurn = false
-    var timeWhite = 300
-    var timeBlack = 300
+    var timeWhite = 300.0
+    var timeBlack = 300.0
     
+    let timeFormatter = DateComponentsFormatter()
     var count: Timer!
     
     @IBOutlet weak var whitetTime: UILabel!
@@ -49,38 +50,36 @@ class ViewController: UIViewController {
             count.invalidate()
         }
         
-        
-        timeWhite = 300
-        timeBlack = 300
-        whitetTime.text = "\(timeFormat(timeWhite))"
-        blackTime.text = "\(timeFormat(timeBlack))"
+        timeWhite = 300.0
+        timeBlack = 300.0
+        whitetTime.text = timeFormatter.string(from: timeWhite)
+        blackTime.text = timeFormatter.string(from: timeBlack)
+        isWhite = true
+        isBlack = false
+        isWhiteTurn = false
+        isBlackTurn = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        timeFormatter.allowedUnits = [.minute, .second]
+        
     }
     
     func onTimerTick(count: Timer) {
         if isWhiteTurn {
-            if timeWhite != 0 {
-                timeWhite -= 1
-                whitetTime.text = "\(timeFormat(timeWhite))"
+            if timeWhite != 0.0 {
+                timeWhite -= 1.0
+                whitetTime.text = timeFormatter.string(from: timeWhite)
             }
         } else {
-            if timeBlack != 0 {
-                timeBlack -= 1
-                blackTime.text = "\(timeFormat(timeBlack))"
+            if timeBlack != 0.0 {
+                timeBlack -= 1.0
+                blackTime.text = timeFormatter.string(from: timeBlack)
             }
         }
         
-    }
-    
-    func timeFormat(_ totalSeconds: Int) -> String {
-        let seconds: Int = totalSeconds % 60
-        let minutes: Int = (totalSeconds / 60) % 60
-        // let hours: Int = totalSeconds / 3600
-        return String(format: "%2d:%02d", minutes, seconds)
     }
 }
