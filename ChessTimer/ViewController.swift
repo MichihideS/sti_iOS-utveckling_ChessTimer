@@ -8,25 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var whitetTime: UILabel!
+    @IBOutlet weak var blackTime: UILabel!
+    @IBOutlet weak var playButtonTest: UIButton!
+    
     var isNotWhite = false
     var timeWhite = 300.0
     var timeBlack = 300.0
     
     let timeFormatter = DateComponentsFormatter()
-    var count: Timer!
+    var count: Timer? = nil
     
-    @IBOutlet weak var whitetTime: UILabel!
-    
-    @IBOutlet weak var blackTime: UILabel!
-    
-    @IBOutlet weak var playButtonTest: UIButton!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        timeFormatter.allowedUnits = [.minute, .second]
+    }
     
     @IBAction func playButton(_ sender: UIButton) {
         sender.setTitle("Switch", for: .normal)
         
-        if count != nil {
-            count.invalidate()
-        }
+        count?.invalidate()
         
         if isNotWhite {
             isNotWhite = false
@@ -38,9 +41,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
-        if count != nil {
-            count.invalidate()
-        }
+        count?.invalidate()
         
         timeWhite = 300.0
         timeBlack = 300.0
@@ -48,13 +49,6 @@ class ViewController: UIViewController {
         blackTime.text = timeFormatter.string(from: timeBlack)
         isNotWhite = true
         playButtonTest.setTitle("Play", for: .normal)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        timeFormatter.allowedUnits = [.minute, .second]
     }
     
     func onTimerTick(count: Timer) {
