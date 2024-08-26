@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var blackTime: UILabel!
     
+    @IBOutlet weak var playButtonTest: UIButton!
     
     @IBAction func playButton(_ sender: UIButton) {
         sender.setTitle("Switch", for: .normal)
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
         whitetTime.text = timeFormatter.string(from: timeWhite)
         blackTime.text = timeFormatter.string(from: timeBlack)
         isNotWhite = true
+        playButtonTest.setTitle("Play", for: .normal)
     }
     
     override func viewDidLoad() {

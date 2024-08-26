@@ -79,6 +79,7 @@
                     </view>
                     <connections>
                         <outlet property="blackTime" destination="MS3-4P-4e1" id="dqY-V4-McF"/>
+                        <outlet property="playButtonTest" destination="9Pc-Bc-y2R" id="SOQ-ap-ayb"/>
                         <outlet property="whitetTime" destination="HGf-sj-4Js" id="2A0-Sx-zJR"/>
                     </connections>
                 </viewController>
