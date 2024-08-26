@@ -14,8 +14,8 @@
             filePath = "ChessTimer/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78">
+            startingLineNumber = "72"
+            endingLineNumber = "72">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -28,8 +28,8 @@
             filePath = "ChessTimer/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "ViewController"
             landmarkType = "3">
             <Locations>
@@ -62,7 +62,7 @@
                   endingLineNumber = "0">
                </Location>
                <Location
-                  uuid = "D84D80A4-1024-499A-973D-FA76BCEB187A - 2e054b51c18217d9"
+                  uuid = "D84D80A4-1024-499A-973D-FA76BCEB187A - 2e054b51c182179b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -72,8 +72,8 @@
                   urlString = "file:///Users/michan/Desktop/iOS-utveckling/ChessTimer/ChessTimer/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
+                  startingLineNumber = "21"
+                  endingLineNumber = "21">
                </Location>
                <Location
                   uuid = "D84D80A4-1024-499A-973D-FA76BCEB187A - cb4447d4e8adb3c7"
@@ -90,7 +90,7 @@
                   endingLineNumber = "0">
                </Location>
                <Location
-                  uuid = "D84D80A4-1024-499A-973D-FA76BCEB187A - f28f93ba715c55f4"
+                  uuid = "D84D80A4-1024-499A-973D-FA76BCEB187A - f28f93ba715c55b6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -100,11 +100,11 @@
                   urlString = "file:///Users/michan/Desktop/iOS-utveckling/ChessTimer/ChessTimer/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
+                  startingLineNumber = "21"
+                  endingLineNumber = "21">
                </Location>
                <Location
-                  uuid = "D84D80A4-1024-499A-973D-FA76BCEB187A - 470fb03353caa743"
+                  uuid = "D84D80A4-1024-499A-973D-FA76BCEB187A - 470fb03353caa701"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -114,8 +114,8 @@
                   urlString = "file:///Users/michan/Desktop/iOS-utveckling/ChessTimer/ChessTimer/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
+                  startingLineNumber = "21"
+                  endingLineNumber = "21">
                </Location>
             </Locations>
          </BreakpointContent>
